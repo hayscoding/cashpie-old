@@ -19,10 +19,16 @@ export default class App extends React.Component {
           <Text>Entered Numbers Shown Here</Text>        
         </View> 
         <View style={styles.row}>
-          <View style={styles.box}><Text style={styles.buttonText}>Clr</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>penile</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>2</Text></View>
           <View style={styles.box}><Text style={styles.buttonText}>3</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>CLR</Text></View>
+        </View> 
+        <View style={styles.row}>
           <View style={styles.box}><Text style={styles.buttonText}>4</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>5</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>6</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}></Text></View>
         </View> 
         <View style={styles.row}>
           <View style={styles.box}><Text style={styles.buttonText}>7</Text></View>
@@ -31,16 +37,10 @@ export default class App extends React.Component {
           <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
         </View> 
         <View style={styles.row}>
-          <View style={styles.box}><Text style={styles.buttonText}>4</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>5</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>6</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
-        </View> 
-        <View style={styles.row}>
-          <View style={styles.box}><Text style={styles.buttonText}>1</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>2</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>3</Text></View>
-          <View style={styles.box}><Text style={styles.buttonText}>0</Text></View>
+          <View style={[styles.box, {borderRightWidth: 0}]}><Text style={styles.buttonText}>0</Text></View>
+          <View style={[styles.box, {borderLeftWidth: 0}]}><Text style={styles.buttonText}></Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}></Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}></Text></View>
         </View> 
 
       </View>
