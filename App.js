@@ -8,8 +8,8 @@ import {
  
 var { height, width } = Dimensions.get('window');
  
-var box_count = 3;
-var box_width = width / box_count;
+var col_count = 4;
+var box_width = width / col_count;
 
 export default class App extends React.Component {
   render() {
@@ -19,16 +19,19 @@ export default class App extends React.Component {
           <View style={[styles.box, styles.box1]}><Text>Box1</Text></View>
           <View style={[styles.box, styles.box2]}><Text>Box2</Text></View>
           <View style={[styles.box, styles.box3]}><Text>Box3</Text></View>
+          <View style={[styles.box, styles.box3]}><Text>Box4</Text></View>
         </View> 
         <View style={styles.row}>
-          <View style={[styles.box, styles.box1]}><Text>Box1</Text></View>
-          <View style={[styles.box, styles.box2]}><Text>Box2 </Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box3</Text></View>
+          <View style={[styles.box, styles.box1]}><Text>Box5</Text></View>
+          <View style={[styles.box, styles.box2]}><Text>Box6</Text></View>
+          <View style={[styles.box, styles.box3]}><Text>Box7</Text></View>
+          <View style={[styles.box, styles.box3]}><Text>Box8</Text></View>
         </View> 
         <View style={styles.row}>
-          <View style={[styles.box, styles.box1]}><Text>Box1</Text></View>
-          <View style={[styles.box, styles.box2]}><Text>Box2</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box3</Text></View>
+          <View style={[styles.box, styles.box1]}><Text>Box9</Text></View>
+          <View style={[styles.box, styles.box2]}><Text>Box10</Text></View>
+          <View style={[styles.box, styles.box3]}><Text>Box11</Text></View>
+          <View style={[styles.box, styles.box3]}><Text>Box12</Text></View>
         </View> 
 
       </View>
@@ -44,10 +47,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    borderBottomWidth: 1,
-    borderBottomColor: '#fff'
   },
   box: {
+    borderWidth: 2,
+    borderColor: 'black',
     height: height,
     width: box_width,
   },
