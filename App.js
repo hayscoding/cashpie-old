@@ -19,22 +19,22 @@ export default class App extends React.Component {
           <Text>Entered Numbers Shown Here</Text>        
         </View> 
         <View style={styles.row}>
-          <View style={[styles.box, styles.box1]}><Text>Box1</Text></View>
-          <View style={[styles.box, styles.box2]}><Text>Box2</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box3</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box4</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
         </View> 
         <View style={styles.row}>
-          <View style={[styles.box, styles.box1]}><Text>Box5</Text></View>
-          <View style={[styles.box, styles.box2]}><Text>Box6</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box7</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box8</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
         </View> 
         <View style={styles.row}>
-          <View style={[styles.box, styles.box1]}><Text>Box9</Text></View>
-          <View style={[styles.box, styles.box2]}><Text>Box10</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box11</Text></View>
-          <View style={[styles.box, styles.box3]}><Text>Box12</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
+          <View style={styles.box}><Text style={styles.buttonText}>Box1</Text></View>
         </View> 
 
       </View>
@@ -56,14 +56,10 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     height: height,
     width: box_width,
+    backgroundColor: '#CECCCF',
   },
-  box1: {
-    backgroundColor: '#2196F3'
+  buttonText: {
+    textAlign: 'center',
+    justifyContent: 'space-around',
   },
-  box2: {
-    backgroundColor: '#8BC34A'
-  },
-  box3: {
-    backgroundColor: '#e3aa1a'
-  }
 });
