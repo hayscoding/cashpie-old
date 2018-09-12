@@ -16,6 +16,9 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.row}>
+          <Text>Entered Numbers Shown Here</Text>        
+        </View> 
+        <View style={styles.row}>
           <View style={[styles.box, styles.box1]}><Text>Box1</Text></View>
           <View style={[styles.box, styles.box2]}><Text>Box2</Text></View>
           <View style={[styles.box, styles.box3]}><Text>Box3</Text></View>
