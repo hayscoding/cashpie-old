@@ -28,13 +28,10 @@ class Button extends React.Component {
   }
 }
 
-export default class App extends React.Component {
+class Numpad extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.topRow}>
-          <Text>Entered Numbers Shown Here</Text>        
-        </View> 
+    return(
+      <View style={{flex: 1}}>
         <View style={styles.row}>
           <Button text='1'/>         
           <Button text='2'/>         
@@ -51,15 +48,27 @@ export default class App extends React.Component {
           <Button text='7'/>         
           <Button text='8'/>         
           <Button text='9'/>         
-          <Button text='ADS'/>         
+          <Button text='BLEH'/>         
         </View> 
         <View style={styles.row}>
-          <Button style={{borderRightWidth: 0}} text='0'/>         
-          <Button style={{borderLeftWidth: 0}} text='0'/>         
+          <Button text='0'/>         
+          <Button text='' />         
           <Button text=''/>         
           <Button text=''/>         
         </View> 
+      </View>
+    )
+  }
+}
 
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.topRow}>
+          <Text>Entered Numbers Shown Here</Text>        
+        </View> 
+        <Numpad style={{flex: 1}}/>
       </View>
     );
   }
@@ -70,7 +79,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topRow: {
-    flex: 2,
+    flex: 1,
     flexDirection: 'row',
   },
   row: {
