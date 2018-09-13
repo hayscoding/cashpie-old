@@ -12,6 +12,22 @@ var { height, width } = Dimensions.get('window');
 var col_count = 4;
 var box_width = width / col_count;
 
+class Button extends React.Component {
+  componentWillMount() {
+    const state = {
+      text: this.props.text
+    }
+
+    this.setState(state)
+  }
+
+  render() {
+    return(
+      <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>{this.props.text}</Text></TouchableOpacity>
+    )
+  }
+}
+
 export default class App extends React.Component {
   render() {
     return (
@@ -20,7 +36,7 @@ export default class App extends React.Component {
           <Text>Entered Numbers Shown Here</Text>        
         </View> 
         <View style={styles.row}>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>1</Text></TouchableOpacity>
+          <Button text='alkdsjf'/>          
           <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>2</Text></TouchableOpacity>
           <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>3</Text></TouchableOpacity>
           <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>CLR</Text></TouchableOpacity>
