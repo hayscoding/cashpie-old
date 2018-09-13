@@ -36,28 +36,28 @@ export default class App extends React.Component {
           <Text>Entered Numbers Shown Here</Text>        
         </View> 
         <View style={styles.row}>
-          <Button text='alkdsjf'/>          
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>2</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>3</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>CLR</Text></TouchableOpacity>
+          <Button text='1'/>         
+          <Button text='2'/>         
+          <Button text='3'/>         
+          <Button text='CLR'/>         
         </View> 
         <View style={styles.row}>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>4</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>5</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>6</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}></Text></TouchableOpacity>
+          <Button text='4'/>         
+          <Button text='5'/>         
+          <Button text='6'/>         
+          <Button text='blaudnfk'/>         
         </View> 
         <View style={styles.row}>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>7</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>8</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>9</Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>Box1</Text></TouchableOpacity>
+          <Button text='7'/>         
+          <Button text='8'/>         
+          <Button text='9'/>         
+          <Button text='ADS'/>         
         </View> 
         <View style={styles.row}>
-          <TouchableOpacity onPress={() => {}} style={[styles.box, {borderRightWidth: 0}]}><Text style={styles.buttonText}>0</Text></TouchableOpacity>
-          <View style={[styles.box, {borderLeftWidth: 0}]}><Text style={styles.buttonText}></Text></View>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}></Text></TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}></Text></TouchableOpacity>
+          <Button style={{borderRightWidth: 0}} text='0'/>         
+          <Button style={{borderLeftWidth: 0}} text='0'/>         
+          <Button text=''/>         
+          <Button text=''/>         
         </View> 
 
       </View>
