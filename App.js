@@ -5,10 +5,17 @@ import {
   Dimensions,
   Text,
   TouchableOpacity,
+  Platform, 
+  NativeModules,
 } from 'react-native';
- 
+
+const { StatusBarManager } = NativeModules;
+
+//Screen measurements
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBarManager.HEIGHT;
 var { height, width } = Dimensions.get('window');
  
+//Relevant for grid like keypad
 var col_count = 4;
 var box_width = width / col_count;
 
@@ -18,8 +25,13 @@ function Button(props) {
   )
 }
 
-class Numpad extends React.Component {
+function StatusBarBackground(props) {
+  return(
+    <View style={[styles.statusBarBackground, props.style || {}]}></View>
+  ) 
+}
 
+class Numpad extends React.Component {
   render() {
     return(
       <View style={{flex: 1}}>
@@ -56,6 +68,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBarBackground />
         <View style={styles.topRow}>
           <Text>Entered Numbers Shown Here</Text>        
         </View> 
@@ -88,5 +101,9 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     flex: 1,
+  },
+  statusBarBackground: {
+    height: STATUSBAR_HEIGHT,
+    backgroundColor: "white",
   },
 });
