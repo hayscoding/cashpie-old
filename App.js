@@ -12,23 +12,14 @@ var { height, width } = Dimensions.get('window');
 var col_count = 4;
 var box_width = width / col_count;
 
-class Button extends React.Component {
-  componentWillMount() {
-    const state = {
-      text: this.props.text
-    }
-
-    this.setState(state)
-  }
-
-  render() {
-    return(
-      <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>{this.props.text}</Text></TouchableOpacity>
-    )
-  }
+function Button(props) {
+  return(
+    <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>{props.text}</Text></TouchableOpacity>
+  )
 }
 
 class Numpad extends React.Component {
+
   render() {
     return(
       <View style={{flex: 1}}>
