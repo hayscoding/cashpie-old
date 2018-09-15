@@ -32,51 +32,53 @@ function StatusBarBackground(props) {
 }
 
 class Numpad extends React.Component {
-  render() {
-    return(
-      <View style={{flex: 1}}>
-        <View style={styles.row}>
-          <Button text='1'/>         
-          <Button text='2'/>         
-          <Button text='3'/>         
-          <Button text='CLR'/>         
-        </View> 
-        <View style={styles.row}>
-          <Button text='4'/>         
-          <Button text='5'/>         
-          <Button text='6'/>         
-          <Button text='blaudnfk'/>         
-        </View> 
-        <View style={styles.row}>
-          <Button text='7'/>         
-          <Button text='8'/>         
-          <Button text='9'/>         
-          <Button text='BLEH'/>         
-        </View> 
-        <View style={styles.row}>
-          <Button text='0'/>         
-          <Button text='' />         
-          <Button text=''/>         
-          <Button text=''/>         
-        </View> 
-      </View>
-    )
-  }
-}
-
-export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {text: '234234'};
   } 
 
   render() {
-    return (
-      <View style={styles.container}>
-        <StatusBarBackground />
+    return(
+      <View style={{flex: 1}}>
         <View style={styles.topRow}>
           <Text style={styles.input}>{this.state.text}</Text>        
         </View> 
+        <View style={{flex: 1}}>
+          <View style={styles.row}>
+            <Button text='1'/>         
+            <Button text='2'/>         
+            <Button text='3'/>         
+            <Button text='CLR'/>         
+          </View> 
+          <View style={styles.row}>
+            <Button text='4'/>         
+            <Button text='5'/>         
+            <Button text='6'/>         
+            <Button text='blaudnfk'/>         
+          </View> 
+          <View style={styles.row}>
+            <Button text='7'/>         
+            <Button text='8'/>         
+            <Button text='9'/>         
+            <Button text='BLEH'/>         
+          </View> 
+          <View style={styles.row}>
+            <Button text='0'/>         
+            <Button text='' />         
+            <Button text=''/>         
+            <Button text=''/>         
+          </View> 
+        </View>
+      </View>
+    )
+  }
+}
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBarBackground />
         <Numpad style={{flex: 1}}/>
       </View>
     );
