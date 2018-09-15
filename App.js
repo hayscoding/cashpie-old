@@ -21,7 +21,7 @@ var box_width = width / col_count;
 
 function Button(props) {
   return(
-    <TouchableOpacity onPress={() => {}} style={styles.box}><Text style={styles.buttonText}>{props.text}</Text></TouchableOpacity>
+    <TouchableOpacity onPress={props.onPress ? props.onPress() : () => {}} style={styles.box}><Text style={styles.buttonText}>{props.text}</Text></TouchableOpacity>
   )
 }
 
