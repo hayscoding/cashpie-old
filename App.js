@@ -40,11 +40,11 @@ class Numpad extends React.Component {
 
   addChar(input) {
     console.log('input: ', input)
-    // const text = "" + this.state.text + input;
+    const text = "" + this.state.text + input;
 
-    // InteractionManager.runAfterInteractions(() => {
-    //   this.setState({text});
-    // })
+    InteractionManager.runAfterInteractions(() => {
+      this.setState({text});
+    })
   }
 
   render() {
