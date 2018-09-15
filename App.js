@@ -75,7 +75,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <StatusBarBackground />
         <View style={styles.topRow}>
-          <Text style={{}}>{this.state.text}</Text>        
+          <Text style={styles.input}>{this.state.text}</Text>        
         </View> 
         <Numpad style={{flex: 1}}/>
       </View>
@@ -91,6 +91,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  input: {
+    fontSize: 55,
   },
   row: {
     flex: 1,
