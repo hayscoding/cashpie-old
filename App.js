@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Platform, 
   NativeModules,
+  InteractionManager,
 } from 'react-native';
 
 const { StatusBarManager } = NativeModules;
@@ -21,7 +22,7 @@ var box_width = width / col_count;
 
 function Button(props) {
   return(
-    <TouchableOpacity onPress={props.onPress ? props.onPress() : () => {}} style={styles.box}><Text style={styles.buttonText}>{props.text}</Text></TouchableOpacity>
+    <TouchableOpacity onPress={() => { props.cb() }} style={styles.box}><Text style={styles.buttonText}>{props.text}</Text></TouchableOpacity>
   )
 }
 
@@ -37,6 +38,15 @@ class Numpad extends React.Component {
     this.state = {text: '234234'};
   } 
 
+  addChar(input) {
+    console.log('input: ', input)
+    // const text = "" + this.state.text + input;
+
+    // InteractionManager.runAfterInteractions(() => {
+    //   this.setState({text});
+    // })
+  }
+
   render() {
     return(
       <View style={{flex: 1}}>
@@ -45,8 +55,8 @@ class Numpad extends React.Component {
         </View> 
         <View style={{flex: 1}}>
           <View style={styles.row}>
-            <Button text='1'/>         
-            <Button text='2'/>         
+            <Button text='1' cb={() => { this.addChar('1') }}/>         
+            {/*<Button text='2'/>         
             <Button text='3'/>         
             <Button text='CLR'/>         
           </View> 
@@ -66,7 +76,7 @@ class Numpad extends React.Component {
             <Button text='0'/>         
             <Button text='' />         
             <Button text=''/>         
-            <Button text=''/>         
+            <Button text=''/>    */}     
           </View> 
         </View>
       </View>
@@ -109,7 +119,7 @@ const styles = StyleSheet.create({
     height: height,
     width: box_width,
     backgroundColor: '#CECCCF',
-    alignItems: "center"
+    alignItems: "center",
   },
   buttonText: {
     flex: 1,
