@@ -56,27 +56,27 @@ class Numpad extends React.Component {
         <View style={{flex: 1}}>
           <View style={styles.row}>
             <Button text='1' cb={() => { this.addChar('1') }}/>         
-            {/*<Button text='2'/>         
-            <Button text='3'/>         
-            <Button text='CLR'/>         
+            <Button text='2' cb={() => { this.addChar('2') }}/>         
+            <Button text='3' cb={() => { this.addChar('3') }}/>         
+            <Button text='CLR' cb={() => {}}/>         
           </View> 
           <View style={styles.row}>
-            <Button text='4'/>         
-            <Button text='5'/>         
-            <Button text='6'/>         
-            <Button text='blaudnfk'/>         
+            <Button text='4' cb={() => { this.addChar('4') }}/>         
+            <Button text='5' cb={() => { this.addChar('5') }}/>         
+            <Button text='6' cb={() => { this.addChar('6') }}/>         
+            <Button text='blaudnfk' cb={() => {}}/>         
           </View> 
           <View style={styles.row}>
-            <Button text='7'/>         
-            <Button text='8'/>         
-            <Button text='9'/>         
-            <Button text='BLEH'/>         
+            <Button text='7' cb={() => { this.addChar('7') }}/>         
+            <Button text='8' cb={() => { this.addChar('8') }}/>         
+            <Button text='9' cb={() => { this.addChar('9') }}/>         
+            <Button text='BLEH' cb={() => {}}/>         
           </View> 
           <View style={styles.row}>
-            <Button text='0'/>         
-            <Button text='' />         
-            <Button text=''/>         
-            <Button text=''/>    */}     
+            <Button text='0' cb={() => { this.addChar('0') }}/>         
+            <Button text='' cb={() => {}}/>         
+            <Button text='' cb={() => {}}/>         
+            <Button text='' cb={() => {}}/>      
           </View> 
         </View>
       </View>
