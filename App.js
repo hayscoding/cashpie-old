@@ -65,12 +65,17 @@ class Numpad extends React.Component {
 }
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: '234234'};
+  } 
+
   render() {
     return (
       <View style={styles.container}>
         <StatusBarBackground />
         <View style={styles.topRow}>
-          <Text>Entered Numbers Shown Here</Text>        
+          <Text style={{}}>{this.state.text}</Text>        
         </View> 
         <Numpad style={{flex: 1}}/>
       </View>
@@ -84,7 +89,8 @@ const styles = StyleSheet.create({
   },
   topRow: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
+    justifyContent: 'center',
   },
   row: {
     flex: 1,
