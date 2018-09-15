@@ -47,6 +47,12 @@ class Numpad extends React.Component {
     })
   }
 
+  clearText() {
+    InteractionManager.runAfterInteractions(() => {
+      this.setState({text: ''});
+    })
+  }
+
   render() {
     return(
       <View style={{flex: 1}}>
@@ -64,7 +70,7 @@ class Numpad extends React.Component {
             <Button text='4' cb={() => { this.addChar('4') }}/>         
             <Button text='5' cb={() => { this.addChar('5') }}/>         
             <Button text='6' cb={() => { this.addChar('6') }}/>         
-            <Button text='blaudnfk' cb={() => {}}/>         
+            <Button text='blaudnfk' cb={() => { this.clearText() }}/>         
           </View> 
           <View style={styles.row}>
             <Button text='7' cb={() => { this.addChar('7') }}/>         
