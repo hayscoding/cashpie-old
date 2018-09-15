@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   topRow: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'flex-end',
   },
   input: {
