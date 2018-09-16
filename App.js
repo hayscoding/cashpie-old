@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Expo from 'expo'
 import {
   StyleSheet,
   View,
@@ -10,15 +11,19 @@ import {
   InteractionManager,
 } from 'react-native';
 
+//Sets dev or production config automatically
+const env = process.env.NODE_ENV || 'development';
+const config = require('./config')[env];
+
 const { StatusBarManager } = NativeModules;
 
 //Screen measurements
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBarManager.HEIGHT;
-var { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
  
 //Relevant for grid like keypad
-var col_count = 4;
-var box_width = width / col_count;
+const col_count = 4;
+const box_width = width / col_count;
 
 function Button(props) {
   return(
@@ -91,6 +96,11 @@ class Numpad extends React.Component {
 }
 
 export default class App extends React.Component {
+  componentDidMount() {
+    console.log(config.amplitude.apiKey)
+    // Expo.Amplitude.initialize() //API Key comes from config
+  }
+
   render() {
     return (
       <View style={styles.container}>
