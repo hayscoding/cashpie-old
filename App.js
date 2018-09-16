@@ -96,9 +96,23 @@ class Numpad extends React.Component {
 }
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hasIntialized: false,
+    }
+  }
+
   componentDidMount() {
-    console.log(config.amplitude.apiKey)
-    // Expo.Amplitude.initialize() //API Key comes from config
+    if(env == 'production' && !this.state.hasIntialized) {
+      Expo.Amplitude.initialize(config.amplitude.apiKey)
+      Expo.Amplitude.logEvent('USER_LOGGED_IN')
+
+      InteractionManager.runAfterInteractions(() => {
+        this.setState({hasIntialized: true})
+      })
+    }
   }
 
   render() {
