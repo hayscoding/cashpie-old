@@ -69,13 +69,13 @@ class Numpad extends React.Component {
             <Button text='1' cb={() => { this.addChar('1') }}/>         
             <Button text='2' cb={() => { this.addChar('2') }}/>         
             <Button text='3' cb={() => { this.addChar('3') }}/>         
-            <Button text='CLR' cb={() => {}}/>         
+            <Button text='CLR' cb={() => { this.clearText() }}/>         
           </View> 
           <View style={styles.row}>
             <Button text='4' cb={() => { this.addChar('4') }}/>         
             <Button text='5' cb={() => { this.addChar('5') }}/>         
             <Button text='6' cb={() => { this.addChar('6') }}/>         
-            <Button text='blaudnfk' cb={() => { this.clearText() }}/>         
+            <Button text='blaudnfk' cb={() => {}}/>         
           </View> 
           <View style={styles.row}>
             <Button text='7' cb={() => { this.addChar('7') }}/>         
